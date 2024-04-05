@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dictionary game</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="translation-client.js"></script>
+</head>
+
+<body>
+<div>
+    <h1>Welcome to Dictionary Game:</h1>
+    <h1>
+        <span class="dictionary-word"></span>
+    </h1>
+    <p>
+    <form id="attempt-form">
+        Translation: <input type="text" name="result-attempt"><br>
+        Nickname: <input type="text" name="user-nickname"><br>
+        <input type="submit" value="Check">
+    </form>
+    </p>
+    <h2><span class="result-message"></span></h2>
+
+    <h2>Statistics</h2>
+    <table id="stats" style="width:100%">
+        <thead>
+        <tr>
+            <th>Attempt ID</th>
+            <th>Word for translate</th>
+            <th>You entered</th>
+            <th>Correct?</th>
+        </tr>
+        </thead>
+        <tbody id="stats-body"></tbody>
+    </table>
+
+</div>
+</body>
+</html>

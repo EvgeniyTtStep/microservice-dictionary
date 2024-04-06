@@ -1,6 +1,5 @@
 package com.example.microservicedictionary.event;
 
-import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

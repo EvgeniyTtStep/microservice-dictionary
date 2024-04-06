@@ -7,9 +7,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class EventDispatcher {
-    private RabbitTemplate rabbitTemplate;
-    private String translationExchange;
-    private String translationCompletedRoutingKey;
+    private final RabbitTemplate rabbitTemplate;
+    private final String translationExchange;
+    private final String translationCompletedRoutingKey;
 
     @Autowired
     EventDispatcher(final RabbitTemplate rabbitTemplate,

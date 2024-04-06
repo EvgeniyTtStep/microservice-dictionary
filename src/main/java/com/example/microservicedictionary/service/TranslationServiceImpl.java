@@ -8,7 +8,6 @@ import com.example.microservicedictionary.event.TranslationCompletedEvent;
 import com.example.microservicedictionary.repository.DictionaryRepository;
 import com.example.microservicedictionary.repository.TranslationResultAttemptRepository;
 import com.example.microservicedictionary.repository.UserRepository;
-import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

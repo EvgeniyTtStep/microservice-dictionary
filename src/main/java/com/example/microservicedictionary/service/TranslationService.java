@@ -12,4 +12,5 @@ public interface TranslationService {
 
     boolean checkAttempt(final TranslationResultAttempt attempt);
 
+    TranslationResultAttempt getResultById(Long resultId);
 }

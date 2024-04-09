@@ -30,12 +30,16 @@ function updateWord() {
 
 $(document).ready(function() {
     updateWord();
+
     $("#attempt-form").submit(function( event ) {
+
         event.preventDefault();
+
         var w = $('.dictionary-word').text();
         var $form = $( this ),
             wordAttempt = $form.find( "input[name='result-attempt']" ).val(),
             userNickname = $form.find( "input[name='user-nickname']" ).val();
+
         var data = {
             user: { nickname: userNickname},
             dictionary:{word:w, translate:""},
@@ -59,6 +63,7 @@ $(document).ready(function() {
             }
         });
         updateWord();
+
         updateStats(userNickname);
     });
 });

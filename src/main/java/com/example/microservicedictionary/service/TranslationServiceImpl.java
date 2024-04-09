@@ -46,10 +46,10 @@ public class TranslationServiceImpl implements TranslationService {
         return attemptRepository.findTop5ByUserNicknameOrderByIdDesc(userNickname);
     }
 
-//    @Override
-//    public TranslationResultAttempt getResultById(final Long resultId) {
-//        return attemptRepository.findById(resultId).orElse(null);
-//    }
+    @Override
+    public TranslationResultAttempt getResultById(final Long resultId) {
+        return attemptRepository.findById(resultId).orElse(null);
+    }
 
 
     @Transactional
@@ -73,6 +73,7 @@ public class TranslationServiceImpl implements TranslationService {
                 isCorrect
         );
         attemptRepository.save(checkedAttempt);
+
         eventDispatcher.send(
                 new TranslationCompletedEvent(checkedAttempt.getId(),
                         checkedAttempt.getUser().getId(),

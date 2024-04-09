@@ -25,6 +25,12 @@ public class TranslationController {
         return translationService.getRandom();
     }
 
+    @GetMapping("/results/{resultId}")
+    ResponseEntity<TranslationResultAttempt> getResultById(final @PathVariable("resultId") Long resultId) {
+        return ResponseEntity.ok(translationService.getResultById(resultId)
+        );
+    }
+
     @PostMapping("/results")
     ResponseEntity<TranslationResultAttempt> postResult(@RequestBody TranslationResultAttempt translationResultAttempt) {
         boolean isCorrect = translationService.checkAttempt(translationResultAttempt);
